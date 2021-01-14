@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+:ChefOfFacilityManagement:
+
+rectangle "headQuarter"{
+    ChefOfFacilityManagement -- (Fire/Recruit new Worker)
+    ChefOfFacilityManagement -- (Create Contracts)
+    ChefOfFacilityManagement -- (Change Contracts)
+    ChefOfFacilityManagement -- (Remove Contracts)
+    ChefOfFacilityManagement -- (Add/Remove Company)
+}
+@enduml

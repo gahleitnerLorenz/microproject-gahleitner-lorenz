@@ -1,0 +1,42 @@
+@startuml
+
+class Employee{
+    -name: String
+    -birthdate: LocalDate
+    -count: Integer
+    -id: Long
+    -contract: List<Contract>
+}
+
+class Client{
+    -adress: String
+    -name: String
+    -contracts: List<Contract>
+    -rooms: String
+    -id: Long
+}
+
+Enum TypeOfFacilityManagement{
+    -CLEANING
+    -SECURITY
+    -REPAIRMENT
+    -PREPARE
+    -PLAN
+}
+
+class Contract{
+    -endDateOfContract: Date
+    -employee: Worker
+    -companyOfWork: Company
+    -salary: Double
+    -listOfFacilityManagement: List<TypeOfFacilityManagement>
+    -id: Long
+}
+
+
+Employee "1" --> "*" Contract : has
+Client "1" --> "*" Contract : has
+Contract "1" --> "*" TypeOfFacilityManagement : has
+
+
+@enduml
